@@ -9,9 +9,10 @@ export default function Form(props) {
   function updateInfo(response) {
     setLoaded(true);
     setDetails({
+      name: response.data.name,
       temp: response.data.main.temp,
       description: response.data.weather[0].description,
-      humitity: response.data.main.humidity,
+      humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
@@ -38,25 +39,44 @@ export default function Form(props) {
   );
 
   let link = (
-    <a href="https://github.com/Maria-G-Garcia/" id="github">
-      {" "}
-      GitHub{" "}
-    </a>
+    <span id="link">
+      Check out the
+      <a href="https://github.com/Maria-G-Garcia/Week6" id="github">
+        {" "}
+        GitHub{" "}
+      </a>
+    </span>
   );
   if (loaded) {
     return (
-      <div>
+      <div className="Container">
         {form}
         <br />
-        <ul>
-          <li>{Math.round(detail.temp)}C</li>
-          <li>{detail.description}</li>
-          <li>{detail.humidity}%</li>
-          <li>{detail.wind}km/h</li>
-          <li>
-            <img src={detail.icon} alt="weather icon"></img>
-          </li>
-        </ul>
+        <div className="row">
+          <div className="col-6">
+            <ul>
+              <li> {detail.name}</li>
+              <li>Date</li>
+              <li>Time</li>
+
+              <li>
+                <img src={detail.icon} alt="weather icon"></img>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6" id="actual">
+            <span>{Math.round(detail.temp)}°C</span>
+          </div>
+          <div className="col-6" id="stats">
+            <ul>
+              <li>{detail.description}</li>
+              <li>{detail.humidity}%</li>
+              <li>{detail.wind}km/h</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   } else {
