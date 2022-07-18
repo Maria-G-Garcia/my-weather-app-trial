@@ -5,12 +5,12 @@
   border: #033768 solid 2px;
 }
 
-.App-link {
-  color: #61dafb;
+link {
   display: block;
   text-align: center;
   margin: 20px auto;
   font-size: 20px;
+  color: brown;
 }
 
 h1 {
