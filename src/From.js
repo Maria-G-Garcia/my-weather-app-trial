@@ -37,6 +37,12 @@ export default function Form(props) {
     </form>
   );
 
+  let link = (
+    <a href="https://github.com/Maria-G-Garcia/" id="github">
+      {" "}
+      GitHub{" "}
+    </a>
+  );
   if (loaded) {
     return (
       <div>
@@ -54,6 +60,6 @@ export default function Form(props) {
       </div>
     );
   } else {
-    return form;
+    return [form, link];
   }
 }
