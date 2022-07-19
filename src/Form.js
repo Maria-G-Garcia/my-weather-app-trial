@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormatDay from "./FormatDay";
+import Forecast from "./Forecast";
 
 export default function Form(props) {
   const [city, setCity] = useState("");
@@ -48,6 +48,7 @@ export default function Form(props) {
       </a>
     </span>
   );
+
   if (loaded) {
     return (
       <div className="Container">
@@ -57,7 +58,6 @@ export default function Form(props) {
           <div className="col-6">
             <ul>
               <li> {detail.name}</li>
-              <FormatDay />
             </ul>
           </div>
         </div>
@@ -74,6 +74,9 @@ export default function Form(props) {
               <li>{detail.humidity}%</li>
               <li>{detail.wind}km/h</li>
             </ul>
+          </div>
+          <div>
+            <Forecast />
           </div>
         </div>
         <div>{link}</div>
