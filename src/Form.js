@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormatDay from "./FormatDay";
 
 export default function Form(props) {
   const [city, setCity] = useState("");
@@ -56,8 +57,7 @@ export default function Form(props) {
           <div className="col-6">
             <ul>
               <li> {detail.name}</li>
-              <li>Date</li>
-              <li>Time</li>
+              <FormatDay />
             </ul>
           </div>
         </div>
