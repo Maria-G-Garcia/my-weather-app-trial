@@ -58,25 +58,25 @@ export default function Form(props) {
               <li> {detail.name}</li>
               <li>Date</li>
               <li>Time</li>
-
-              <li>
-                <img src={detail.icon} alt="weather icon"></img>
-              </li>
             </ul>
           </div>
         </div>
         <div className="row">
           <div className="col-6" id="actual">
-            <span>{Math.round(detail.temp)}°C</span>
+            <span>
+              <img src={detail.icon} alt="weather icon"></img>
+            </span>
+            <span id="actual">{Math.round(detail.temp)}°C</span>
           </div>
           <div className="col-6" id="stats">
-            <ul>
+            <ul id="stats">
               <li>{detail.description}</li>
               <li>{detail.humidity}%</li>
               <li>{detail.wind}km/h</li>
             </ul>
           </div>
         </div>
+        <div>{link}</div>
       </div>
     );
   } else {
