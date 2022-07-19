@@ -5,21 +5,37 @@
   border: #033768 solid 2px;
 }
 
-link {
+.App h1 {
+  color: blue;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App form {
+  display: block;
+  margin: 15px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.App #actual {
+  font-size: 50px;
+  color: blue;
+  text-align: center;
+}
+
+.App #stats {
+  font-size: 20px;
+  color: blue;
+}
+
+.App link {
   display: block;
   text-align: center;
   margin: 20px auto;
   font-size: 20px;
 }
 
-h1 {
-  color: blue;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-form {
-  display: block;
-  margin: 15px auto;
-  padding: 5px;
-  text-align: center;
+ul {
+  list-style: none;
 }
