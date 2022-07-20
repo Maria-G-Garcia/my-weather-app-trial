@@ -75,9 +75,6 @@ export default function Form(props) {
               <li>{detail.wind}km/h</li>
             </ul>
           </div>
-          <div>
-            <Forecast />
-          </div>
         </div>
         <div>{link}</div>
       </div>
